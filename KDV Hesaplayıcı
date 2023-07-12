@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class KDVHesaplayıcı {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Kullanıcıdan miktar girdisi alır
+        int miktar = scanner.nextInt();
+
+        // KDV miktarını hesaplar
+        float kdvdeger = 0.18f;
+        if (miktar > 1000) {
+            kdvdeger = 0.08f;
+        }
+        float kdvmiktarı = miktar * kdvdeger;
+
+        // KDV Değerini Hesaplar
+        float kdvdeğeri = miktar + kdvmiktarı;
+
+        // KDV miktarı ve KDV'li Değeri Ekrana Yazdırır
+        System.out.println("KDV Miktarı: " + kdvmiktar);
+        System.out.println("KDV'li Değeri: " + kdvdeger);
+    }
+}
